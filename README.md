@@ -35,7 +35,8 @@ For the server side I used<br>
 <br><br>
 
 <b> MongoDB part</b>
-* Using <b>Mongoose</b> for Object modeling ability. </p> <br>
+<br>
+* Using <b>Mongoose</b> for Object modeling ability.<br>
 * Using MongoDB Compass for DB management <br>
 
     
