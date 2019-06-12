@@ -24,11 +24,16 @@ For the server side I used<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>server.use(cors())</b> for Cors<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>server.use("/api", controller)</b> for api routes to the controller page.<br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>server.use(express.static('public'))</b> for public files access.<br>
-    <b> ==> Controller.js</b> Uses for all API routes <br>
+    <b> ==> Controller.js</b> Uses for all API routes with <b>express.Router()</b><br>
     <b> ==> Logics.js</b> Uses to connect the requests between the The api layer and the Database<br>
     <b> ==> Dal.js</b> Uses to active the DB connection.<br>
-* <b> Mongoose </b> For the ability to use Object modeling in this projects. <br>
-* <b> 
+* <b> Mongoose </b> for the ability to use Object modeling in this projects. <br>
+* <b> Multer </b> Allowing uploading files from the client side <br>
+* <b>Models</b> folder for all the <b>Mongoose.models</b> on the server side. <br>
+* <b>Public</b> folder for storing all files for client side use. <br>
+<br><br>
+
+<b> MongoDB part</b>
     
         
 
