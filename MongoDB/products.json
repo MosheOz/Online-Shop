@@ -1,0 +1,42 @@
+{"_id":{"$oid":"5cd062c8bed2b12f80a21a24"},"name":"minced meat","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":{"$numberDouble":"67.9"},"imgFileName":"Meat1.png"}
+{"_id":{"$oid":"5cd063ea96c7bb2f80f2093c"},"name":"Asado breast ","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":{"$numberDouble":"54.9"},"imgFileName":"Meat2.png"}
+{"_id":{"$oid":"5cd0644496c7bb2f80f2093d"},"name":"Asado Veal","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":"59.9","imgFileName":"Meat3.png"}
+{"_id":{"$oid":"5cd064fc96c7bb2f80f2093e"},"name":"Ossobucco","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":"64.9","imgFileName":"Meat4.png"}
+{"_id":{"$oid":"5cd0657c96c7bb2f80f2093f"},"name":"Entrecote","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":"94.9","imgFileName":"Meat5.png"}
+{"_id":{"$oid":"5cd0669a96c7bb2f80f20940"},"name":"Ribs with bone","category":{"$oid":"5cb5ed74f0cfc503b02a023d"},"price":"52.9","imgFileName":"Meat6.png"}
+{"_id":{"$oid":"5cd0678d96c7bb2f80f20941"},"name":"Milk in cardboard - 3%  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":{"$numberDouble":"5.5"},"imgFileName":"Dairy1.png"}
+{"_id":{"$oid":"5cd14cce96c7bb2f80f20942"},"name":"Milk in cardboard - 1%  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":{"$numberDouble":"5.5"},"imgFileName":"Dairy2.png"}
+{"_id":{"$oid":"5cd14d1496c7bb2f80f20943"},"name":"Milk in cardboard - 1.5%  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":"5.5","imgFileName":"Dairy3.png"}
+{"_id":{"$oid":"5cd14d6196c7bb2f80f20944"},"name":"Milk in a bag - 3%  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":"4.5","imgFileName":"Dairy4.png"}
+{"_id":{"$oid":"5cd14d8e96c7bb2f80f20945"},"name":"Milk in a bag - 1%  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":"4.5","imgFileName":"Dairy5.png"}
+{"_id":{"$oid":"5cd14e0396c7bb2f80f20946"},"name":"Chocolate milk - Bottle  ","category":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"price":{"$numberDouble":"11.5"},"imgFileName":"Dairy6.png"}
+{"_id":{"$oid":"5cd14e7496c7bb2f80f20947"},"name":"Whole wheat bread","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":{"$numberDouble":"13.5"},"imgFileName":"Bread1.png"}
+{"_id":{"$oid":"5cd14ebc96c7bb2f80f20948"},"name":"whole wheat bread","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":{"$numberDouble":"14.5"},"imgFileName":"Bread2.png"}
+{"_id":{"$oid":"5cd14f0696c7bb2f80f20949"},"name":"Rolls - 6 in a package","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":"7.5","imgFileName":"Bread3.png"}
+{"_id":{"$oid":"5cd14f5296c7bb2f80f2094a"},"name":"Cheesecake","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":"19.5","imgFileName":"Bread4.png"}
+{"_id":{"$oid":"5cd14f8e96c7bb2f80f2094b"},"name":"Chocolate Cake","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":"21.5","imgFileName":"Bread5.png"}
+{"_id":{"$oid":"5cd14fcd96c7bb2f80f2094c"},"name":"honey cake","category":{"$oid":"5cb5eda5f0cfc503b02a023f"},"price":"9.5","imgFileName":"Bread6.png"}
+{"_id":{"$oid":"5cd1503296c7bb2f80f2094d"},"name":"Banana","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":{"$numberDouble":"7.5"},"imgFileName":"Fruits1.png"}
+{"_id":{"$oid":"5cd1506396c7bb2f80f2094e"},"name":"Orange","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":{"$numberDouble":"3.5"},"imgFileName":"Fruits2.png"}
+{"_id":{"$oid":"5cd1509496c7bb2f80f2094f"},"name":"Apple","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":"4.5","imgFileName":"Fruits3.png"}
+{"_id":{"$oid":"5cd150d096c7bb2f80f20950"},"name":"Pear","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":"9.5","imgFileName":"Fruits4.png"}
+{"_id":{"$oid":"5cd1514696c7bb2f80f20951"},"name":"Organic Strawberry","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":"10.5","imgFileName":"Fruits5.png"}
+{"_id":{"$oid":"5cd1521796c7bb2f80f20952"},"name":"Organic watermelon","category":{"$oid":"5cd05e8ebed2b12f80a21a20"},"price":"8.5","imgFileName":"Fruits6.png"}
+{"_id":{"$oid":"5cd1529096c7bb2f80f20953"},"name":"Cucumber","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":"4.5","imgFileName":"vegetable1.png"}
+{"_id":{"$oid":"5cd152e796c7bb2f80f20954"},"name":"Tomato","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":{"$numberDouble":"4.5"},"imgFileName":"vegetable2.png"}
+{"_id":{"$oid":"5cd1532a96c7bb2f80f20955"},"name":"Potatoes","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":"4.9","imgFileName":"vegetable3.png"}
+{"_id":{"$oid":"5cd1535e96c7bb2f80f20956"},"name":"Onion","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":"5.9","imgFileName":"vegetable4.png"}
+{"_id":{"$oid":"5cd153a796c7bb2f80f20957"},"name":"Red pepper","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":"3.9","imgFileName":"vegetable5.png"}
+{"_id":{"$oid":"5cd153ff96c7bb2f80f20958"},"name":"Coriander","category":{"$oid":"5cd05f04bed2b12f80a21a21"},"price":"4.9","imgFileName":"vegetable6.png"}
+{"_id":{"$oid":"5cd1546496c7bb2f80f20959"},"name":"Fanta - strawberry","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"5.5","imgFileName":"Drinks1.png"}
+{"_id":{"$oid":"5cd154d296c7bb2f80f2095a"},"name":"Coca Cola","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"6.5","imgFileName":"Drinks2.png"}
+{"_id":{"$oid":"5cd1550196c7bb2f80f2095b"},"name":"Sprite","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"6.5","imgFileName":"Drinks3.png"}
+{"_id":{"$oid":"5cd1556a96c7bb2f80f2095c"},"name":"Schweppes - Orange","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"6.5","imgFileName":"Drinks4.png"}
+{"_id":{"$oid":"5cd155a896c7bb2f80f2095d"},"name":"Schweppes - Strawberry Lemon","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"6.5","imgFileName":"Drinks5.png"}
+{"_id":{"$oid":"5cd1562e96c7bb2f80f2095e"},"name":"Coca Cola- Enclosure","category":{"$oid":"5cd05f9fbed2b12f80a21a22"},"price":"33.5","imgFileName":"Drinks6.png"}
+{"_id":{"$oid":"5cd156ba96c7bb2f80f2095f"},"name":"Cereals - Corn flakes","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":{"$numberDouble":"13.5"},"imgFileName":"Cereals1.png"}
+{"_id":{"$oid":"5cd156fc96c7bb2f80f20960"},"name":"Cereals - Fitness Fruits","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":"14.5","imgFileName":"Cereals2.png"}
+{"_id":{"$oid":"5cd1573e96c7bb2f80f20961"},"name":"Cereals - Peanut crunch","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":"14.5","imgFileName":"Cereals3.png"}
+{"_id":{"$oid":"5cd1578e96c7bb2f80f20962"},"name":"Cereals - Oreo","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":"19.5","imgFileName":"Cereals4.png"}
+{"_id":{"$oid":"5cd157ca96c7bb2f80f20963"},"name":"Cereals - Coco","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":"19.5","imgFileName":"Cereals5.png"}
+{"_id":{"$oid":"5cd1581f96c7bb2f80f20964"},"name":"Cereals - Kariyot chocolate","category":{"$oid":"5cd05fcdbed2b12f80a21a23"},"price":{"$numberDouble":"19.5"},"imgFileName":"Cereals5.png"}

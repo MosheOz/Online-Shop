@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5cf6de58873cda1ae8d0d921"},"firstName":"moshe","lastName":"oz","email":"moz770@gmail.com","password":"1234","phone":"0587978222","city":"Jerusalem","street":"yaffo ","houseNumber":"25","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f13e873cda1ae8d0d942"},"firstName":"david","lastName":"cohen","email":"david11@gmail.com","password":"1234","phone":"02-5569773","city":"Bat Yam","street":"Hagiborim","houseNumber":"17","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f1d3873cda1ae8d0d948"},"firstName":"avi","lastName":"levi","email":"avi@gmail.com","password":"1234","phone":"0542327556","city":"Tel Aviv","street":"arlozorov","houseNumber":"25/1","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f281873cda1ae8d0d950"},"firstName":"israel","lastName":"sason","email":"israel@walla.com","password":"1234","phone":"0772525466","city":"Rehovot","street":"hertzel","houseNumber":"77/2b","__v":{"$numberInt":"0"}}

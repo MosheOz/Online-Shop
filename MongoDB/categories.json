@@ -1,0 +1,7 @@
+{"_id":{"$oid":"5cb5ed74f0cfc503b02a023d"},"name":"Meat"}
+{"_id":{"$oid":"5cb5ed8ff0cfc503b02a023e"},"name":"Dairy"}
+{"_id":{"$oid":"5cb5eda5f0cfc503b02a023f"},"name":"Bakery and bread"}
+{"_id":{"$oid":"5cd05e8ebed2b12f80a21a20"},"name":"Fruits"}
+{"_id":{"$oid":"5cd05f04bed2b12f80a21a21"},"name":"Vegetables"}
+{"_id":{"$oid":"5cd05f9fbed2b12f80a21a22"},"name":"Drinks"}
+{"_id":{"$oid":"5cd05fcdbed2b12f80a21a23"},"name":"Cereals"}

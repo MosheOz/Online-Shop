@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5cb5e795f0cfc503b02a023c"},"firstName":"david","lastName":"davidovich","email":"david@gmail.com","password":"1234"}
+{"_id":{"$oid":"5cf6ef812913011504e7a5c5"},"firstName":"israel","lastName":"cohen","email":"israel@gmail.com","password":"1234"}

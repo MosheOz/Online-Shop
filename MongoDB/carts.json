@@ -1,0 +1,12 @@
+{"_id":{"$oid":"5cf6efdf873cda1ae8d0d938"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559687135067"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f0a4873cda1ae8d0d93c"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559687332511"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f0e0873cda1ae8d0d941"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559687392364"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f14a873cda1ae8d0d943"},"customerID":{"$oid":"5cf6f13e873cda1ae8d0d942"},"dateCreated":{"$date":{"$numberLong":"1559687498306"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f188873cda1ae8d0d947"},"customerID":{"$oid":"5cf6f13e873cda1ae8d0d942"},"dateCreated":{"$date":{"$numberLong":"1559687560513"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f1e2873cda1ae8d0d949"},"customerID":{"$oid":"5cf6f1d3873cda1ae8d0d948"},"dateCreated":{"$date":{"$numberLong":"1559687650357"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f221873cda1ae8d0d94f"},"customerID":{"$oid":"5cf6f1d3873cda1ae8d0d948"},"dateCreated":{"$date":{"$numberLong":"1559687712873"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f2de873cda1ae8d0d951"},"customerID":{"$oid":"5cf6f281873cda1ae8d0d950"},"dateCreated":{"$date":{"$numberLong":"1559687901976"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f992873cda1ae8d0d968"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559689617893"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf6f9d3873cda1ae8d0d96c"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559689683030"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf7001d873cda1ae8d0d978"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559691293020"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cf70098873cda1ae8d0d97c"},"customerID":{"$oid":"5cf6de58873cda1ae8d0d921"},"dateCreated":{"$date":{"$numberLong":"1559691416221"}},"__v":{"$numberInt":"0"}}
