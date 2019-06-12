@@ -18,10 +18,19 @@ For the server side I used<br>
 * <b>Express</b> for all the <b>rest API</b> requests calls. <br>
 * <b>Cors </b> to allow calls from a different port on the client side.<br>
 * The files divided into four:<br>
-    <b>App.js</b> main file, using <b> middlewares</b> for: <br>
-    *<b>server.use(express.json())</b> for requests body parser. <br>
-    *<b>server.use(cors())</b> for Cors<br>
-    *<b>server.use("/api", controller)</b> for api routes to th controller page.<br>
+    <b> ==> App.js</b> main file, using <b> middlewares</b> for: <br>
+        <b>const server = express();</b><br>
+        <b>server.use(express.json())</b> for requests body parser. <br>
+        <b>server.use(cors())</b> for Cors<br>
+        <b>server.use("/api", controller)</b> for api routes to th controller page.<br>
+        <b>server.use(express.static('public'))</b> for public files access.<br>
+    <b> ==> Controller.js</b> Uses for all API routes <br>
+    <b> ==> Logics.js</b> Uses to connect the requests between the The api layer and the Database<br>
+    <b> ==> Dal.js</b> Uses to active the DB connection.<br>
+* <b> Mongoose </b> For the ability to use Object modeling in this projects. <br>
+
+    
+        
 
 
 
