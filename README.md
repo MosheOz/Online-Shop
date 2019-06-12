@@ -16,7 +16,7 @@ For the client side I used<br>
 <b>NodeJS part</b>
 <br>
 For the server side I used<br>
-* <b>Express</b> for all the <b>rest API</b> requests calls. <br>
+* <b>Express</b> for all <b>restful API</b> requests calls. <br>
 * <b>Cors </b> to allow calls from a different port on the client side.<br>
 * The files divided into four:<br>
     <b> ==> App.js</b> main file, using <b> middlewares</b> for: <br>
