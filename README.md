@@ -31,10 +31,13 @@ For the server side I used<br>
 * <b> Multer </b> Allowing uploading files from the client side <br>
 * <b>Models</b> folder for all the <b>Mongoose.models</b> on the server side. <br>
 * <b>Public</b> folder for storing all files for client side use. <br>
-* The server listens to Port 3000 <b>server.listen</b><br>
+* The server listens to Port 3000 <b>server.listen()</b><br>
 <br><br>
 
 <b> MongoDB part</b>
+* Using <b>Mongoose</b> for Object modeling ability. </p> <br>
+* Using MongoDB Compass for DB management <br>
+
     
         
 
