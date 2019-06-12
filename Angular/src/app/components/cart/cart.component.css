@@ -1,0 +1,110 @@
+.cart-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionA {
+    flex: 1;
+}
+.sectionA > div {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+.emptyCart {
+    width: 100%;
+    cursor: pointer;
+}
+.emptyCart:hover {
+    border-radius: 3%;
+    color: white;
+}
+.sectionB {
+    flex: 8;
+    overflow: auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+.sectionC {
+    flex: 1;
+    font-size: 25px; 
+}
+
+.sectionC > div {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    color: black;
+}
+.sectionC > div:nth-of-type(2):hover{
+    color: green;
+    cursor: pointer;
+}
+.loader {
+    width: 50%;
+    margin: auto;
+}
+
+.loader > img {
+    width: 150px;
+    height: 150px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+
+.title > div {
+    flex: 1;
+    font-weight: bold;
+}
+.cartItemsContainer {
+    background: rgb(117, 216, 117);
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+    line-height: 15px;
+    align-items: center;
+    border-radius: 10px; 
+    font-weight: bold;
+}
+
+.cartItemsContainer > div {
+    flex-basis: 15%;
+    flex: 1;
+    
+}
+
+
+.cartItemsContainer > .productImg > img {
+    width: 100px;
+    height: 100px;
+    padding: 7px;
+}
+
+.cartItemsContainer:hover {
+    background: rgb(181, 241, 181);
+    cursor: pointer;
+}
+
+.deleteItem {
+    color: red;
+    height: 100%;
+}
+.deleteItem:hover {
+    cursor: pointer;
+}
+
+.close{
+    width: 100%;
+}

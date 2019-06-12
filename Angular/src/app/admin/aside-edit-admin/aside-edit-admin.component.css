@@ -1,0 +1,30 @@
+.sectionB {
+    text-align: center;
+}
+
+form{
+    width: 90%;
+    margin: auto;
+}
+select {
+    font-size: 15px;
+}
+
+
+#upload-photo {
+    opacity: 0.5;
+    cursor: pointer;
+ }
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; 
+}
+  
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; 
+}
+
+select {
+    border-left: 5px solid #42A948;
+}
+

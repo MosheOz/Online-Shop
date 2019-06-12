@@ -1,0 +1,72 @@
+<div class="cart-container">
+
+    <div class="sectionA">
+
+        <div class="sectionATitle">
+            <p>My Cart &nbsp;
+                <i class="fas fa-shopping-cart"></i>
+            </p>
+        </div>
+
+        <div class="sectionARight" routerLink="/products">
+            <p>back to shop &nbsp;
+                <i class="fas fa-angle-double-right"></i>
+            </p>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="sectionB">
+
+        <div *ngIf="cartItems">
+
+            <div class="title">
+                <div>item</div>
+                <div>name</div>
+                <div>units</div>
+                <div>price</div>
+            </div>
+
+            <div *ngIf="cartItems.length === 0">
+                <div style="text-align: center; margin-top: 50px; color: lightslategray;font-size: 20px;">Your Cart Is empty
+                    <br>
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div *ngFor="let c of cartItems" class="cartItemsContainer">
+                <div class="productImg">
+                    <img src="http://localhost:3000/images/{{c.product.imgFileName}}" alt="productImg">
+                </div>
+
+                <div class="productName">
+                    <p>{{c.product.name}}</p>
+                </div>
+
+                <div class="productQuantity">
+                    <p>{{c.quantity}}</p>
+                </div>
+
+                <div class="productTotalPrice">
+                    <p> {{c.totalPrice | currency:'ILS'}}</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div *ngIf="!cartItems" class="loader">
+            <img src="/assets/images/Double Ring-1s-200px.gif" alt="loader">
+        </div>
+    </div>
+
+    <div class="sectionC">
+        <hr>
+
+        <div>
+            <h3 #sum>Total: {{getSumCart() | currency:'ILS'}} </h3>
+        </div>
+    </div>
+</div>

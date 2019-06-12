@@ -1,0 +1,21 @@
+h3 {
+    text-align: center;
+}
+
+.liveStore {
+    display: inline-block;
+    font-size: 20px;
+    height: 50%;
+    width: 75%;
+    margin-left: 12.5%;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.afterLoginMessage{
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 15px;
+    background: white;
+}

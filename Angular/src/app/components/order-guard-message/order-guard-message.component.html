@@ -1,0 +1,50 @@
+<div class="main">
+    <div class="alert alert-success" *ngIf="order && noOrders == false">
+        <i class="fas fa-shopping-cart"></i>
+        <h2 *ngIf="curCustomer">Hi {{curCustomer}}</h2>
+        <h2>
+            <b>Your last order was on:</b>
+            <br> {{order.cart.dateCreated | date: 'MMM d, y'}}</h2>
+        <h3>
+            <b>Order Details:</b>
+        </h3>
+        <p>
+            <b>Order ID:</b> {{order._id}}</p>
+        <p>
+            <b>Total:</b> {{order.totalPrice | currency: 'ILS'}}</p>
+        <p>
+            <b>Sipping Address:</b> {{order.streetForShipping}} {{order.cityForShiping}}</p>
+        <p>
+            <b>Shipping Time:</b>
+            {{order.cart.dateCreated | date: 'short'}}
+        </p>
+        <br>
+        <div>
+            <button class="btn btn-success" routerLink="/home" style="font-size: 20px;">Go To Home Page
+                <i class="fas fa-home"></i>
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="noOrders == true" style="font-size: 20px;">
+        <div class="alert alert-success">
+
+            <i class="fas fa-cart-arrow-down"></i>
+
+            <h2 *ngIf="curCustomer"> Hi
+                <b>{{curCustomer}}</b>
+            </h2>
+            <h2>
+                <br>You don't have any orders yet.</h2>
+            <h3>Hit the home button and start enjoy your first order
+                <i class="far fa-smile"></i>
+            </h3>
+            <br>
+            <div>
+                <button class="btn btn-success" routerLink="/home" style="font-size: 20px;">Go To Home Page
+                    <i class="fas fa-home"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

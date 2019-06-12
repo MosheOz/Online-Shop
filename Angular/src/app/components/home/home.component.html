@@ -1,0 +1,57 @@
+<div class="main">
+
+    <div class="loginForm" *ngIf=" !isLoggedIn">
+        <form>
+            <div class="alert alert-danger" *ngIf="!emailPasswordIncorrect">
+                <p>password or email is not correct ..</p>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" [(ngModel)]="credentials.email" placeholder="Type Your Email Here" class="form-control" #email>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" [(ngModel)]="credentials.password" placeholder="Type Your Password Here" class="form-control">
+            </div>
+            <div>
+                <button class="btn btn-primary" (click)="isCredentialsCorrect()" style="max-height: 30px !important;">Login
+                    <span *ngIf="loader">
+                        <img src="/assets/images/Double Ring-1s-200px.gif " alt="loader ">
+                    </span>
+                </button>
+                <a class="btn btn-link" routerLink="/register">Register</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="afterLogin" *ngIf="isLoggedIn" style="text-align: center;">
+
+        <img *ngIf="!cartStatus" src="/assets/images/Double Ring-1s-200px.gif" alt="loader">
+
+        <div *ngIf="cartStatus">
+            <div [ngSwitch]="cartStatus.value">
+                <div *ngSwitchCase="'a'">
+
+                    <button class="btn btn-outline-success btn-lg" style="color: black;width: 100%; height: 475px;" routerLink="/products" (click)="isOrderForStore()">Resume Shopping</button>
+                </div>
+
+                <div *ngSwitchCase="'b'">
+                    <button class="btn btn-outline-success btn-lg" style="color: black; width: 100%; height: 475px;" routerLink="/products" (click)="isOrderForStore()">Start Shopping</button>
+                </div>
+
+                <div *ngSwitchCase="'c'">
+                    <button class="btn btn-outline-success btn-lg" style="color: black;width: 100%; height: 475px;" routerLink="/products" (click)="isOrderForStore()">Welcome To Your First Shopping</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <app-about></app-about>
+    </div>
+
+    <div class="shopDetails">
+        <app-live-details></app-live-details>
+    </div>
+</div>

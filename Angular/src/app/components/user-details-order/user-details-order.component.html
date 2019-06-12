@@ -1,0 +1,124 @@
+<div class="main">
+
+    <h3>Order &nbsp;
+        <i class="fas fa-money-check-alt"></i>
+    </h3>
+    <form #form="ngForm" *ngIf="currentCustomer">
+        <div class="line">
+            <div class="column">
+                <h4>Shipping Details</h4>
+
+                <label for="city">City</label>
+                <select class="categoriesselect" name="city" class="form-control" [(ngModel)]="currentCustomer.city" #city>
+                    <optgroup style="padding-right:10px;" label="center">
+                        <option>Beney Berak</option>
+                        <option>Bat Yam</option>
+                        <option>Givat Shemuel</option>
+                        <option>Givatayim</option>
+                        <option>Holon</option>
+                        <option>Yahud</option>
+                        <option>Lod</option>
+                        <option>Modi'in</option>
+                        <option>Ness Tziyona</option>
+                        <option>Petach Tikva</option>
+                        <option>Kiryat Ono</option>
+                        <option>Kiryat Ekron</option>
+                        <option>Rishon Leztion</option>
+                        <option>Rehovot</option>
+                        <option>Ramat Gan</option>
+                        <option>Tel Aviv</option>
+                        <option selected=""></option>
+                    </optgroup>
+                    <optgroup style="padding-right:10px;" label="Jerusalem Area">
+                        <option>Bet Shemesh</option>
+                        <option>Jerusalem</option>
+                        <option>Ma'ale Edomim</option>
+                    </optgroup>
+                    <optgroup style="padding-right:10px;" label="North">
+                        <option>Zichron Yaakov</option>
+                        <option>Haifa</option>
+                        <option>Teveria</option>
+                        <option>Yokne'am</option>
+                        <option>Karmiel</option>
+                        <option>Nahariya</option>
+                        <option>Natzrat</option>
+                        <option>Akko</option>
+                        <option>Affula</option>
+                        <option>Tzemach</option>
+                        <option>Kiryat Ata</option>
+                        <option>Kiryat Bialik</option>
+                        <option>Rosh Pina</option>
+                        <option>Regba&nbsp;&nbsp;&nbsp;</option>
+                        <option>Ramat Yishay</option>
+                    </optgroup>
+                    <optgroup style="padding-right:10px;" label="South">
+                        <option>Eilat</option>
+                        <option>Ashdod</option>
+                        <option>Ashkelon</option>
+                        <option>Be'er Sheva</option>
+                        <option>Gan Yavneh</option>
+                        <option>Dimona</option>
+                        <option>Kastina</option>
+                        <option>Rishon Letzion</option>
+                    </optgroup>
+                    <optgroup style="padding-right:10px;" label="Sharon">
+                        <option>Gan Shemuel</option>
+                        <option>Hod Hasharon</option>
+                        <option>Hertzeliya</option>
+                        <option>Hadera</option>
+                        <option>Kefar saba</option>
+                        <option>Netania</option>
+                        <option>Ra'ana</option>
+                    </optgroup>
+                </select>
+                <br>
+
+                <label for="street">Street and house number</label>
+                <input type="text" class="form-control" value="{{currentCustomer.street + ' ' + currentCustomer.houseNumber}}" name="street"
+                    #street (change)="enableBtn($event, btn)">
+                <br>
+
+                <label for="shippingDate">Shipping Date</label>
+                <input class="form-control" name="houseNumber" [value]="timeForShpping | date: 'short'" disabled>
+                <br>
+                <br>
+
+                <h4>Payments: </h4>
+                <label for="creditCard">Credit Card
+                    <span>
+                        <i class="fab fa-cc-visa" style="font-size: 15px;"></i> &nbsp;
+                        <i class="	fab fa-cc-mastercard" style="font-size: 15px;"></i>
+                    </span>
+                </label>
+                <input type="text" pattern="[0-9]*" class="form-control" name="creditCard" #creditCard (change)="enableBtn($event, btn)">
+                <br>
+                <div *ngIf="!isInput" class="alert alert-danger">
+                    <div [ngSwitch]="empty">
+                        <div *ngSwitchCase="'a'">
+                            <p style="text-align: center;">city is required!</p>
+                        </div>
+                        <div *ngSwitchCase="'b'">
+                            <p style="text-align: center;">street is required!</p>
+                        </div>
+                        <div *ngSwitchCase="'c'">
+                            <p style="text-align: center;">Please enter a valid credit card number</p>
+                        </div>
+                        <div *ngSwitchCase="'d'">
+                            <p style="text-align: center;">Minimum for order: {{minimumForOrder | currency: 'ILS'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line">
+            <button class="btn btn-success btn-block" (click)="order(creditCard.value, city.value, street.value)" #btn>Submit
+                <span *ngIf="loader">
+                    <img src="/assets/images/Double Ring-1s-200px.gif" alt="loader">
+                </span>
+                &nbsp;
+                <i class="fas fa-credit-card"></i>
+            </button>
+        </div>
+    </form>
+</div>

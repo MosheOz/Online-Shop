@@ -1,0 +1,51 @@
+.container-management {
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+}
+
+.section-a {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    left:0;
+    background: rgb(255, 209, 124);
+}
+
+.section-b {
+    width:70%;
+    height: 100%;
+    position: absolute;
+    right: 0; 
+    display: inline-block;
+    background: lightgray;
+    overflow: auto;
+}
+
+@media screen and (max-width: 950px){
+
+    /* get different order and size to the products and edit components */
+
+    .container-management  {
+        height: 200%;
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-a {
+        order: 2;
+        width: 100%;
+        height:50%;
+        position: relative;
+        padding: 5px;
+    }
+
+    .section-b {
+        order: 1;
+        width: 100%;
+        height:50%;
+        position: relative;
+        padding: 5px;
+    }
+}

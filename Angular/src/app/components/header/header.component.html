@@ -1,0 +1,57 @@
+<div class="main">
+
+    <div class="title">
+        <!-- logo -->
+        <p><i class="fas fa-globe" style='color:rgb(255, 184, 51)'></i>nline-shops.com</p>
+    </div>
+
+    <div class="subMain">
+        <!-- nav for admin login -->
+        <div class="navigation" *ngIf="!isLoggedIn && !isAdminLoggedIn">
+            <span class="routerSpan" routerLink="/admin-log-in">Admin
+                <i class="glyphicon glyphicon-log-in"></i>
+            </span>
+        </div>
+
+        <!-- nav to home and orders -->
+        <div class="navigation" *ngIf="isLoggedIn">
+            <span class="routerSpan" routerLink="/home">Home
+                <i class="	fas fa-home"></i>
+            </span> &nbsp;
+            <span class="routerSpan" routerLink="/last-order-message">Orders
+                <i class="fas fa-shopping-bag"></i>
+            </span>
+        </div>
+
+        <div class="logout">
+
+            <!-- if no one login -->
+            <div *ngIf="!isLoggedIn && !isAdminLoggedIn" class="hello">
+                <span class="helloName">Hello guest</span>
+            </div>
+
+            <!-- if user logged in -->
+            <div *ngIf="isLoggedIn" class="hello">
+
+                <p class="logoutMessage">
+                    <span class="helloName">Hello {{customerName?.firstName}} &nbsp;
+                        <i (click)="logout()" class="logoutButton">Logout
+                            <i class="glyphicon glyphicon-log-out"></i>
+                        </i> &nbsp;</span>
+                </p>
+
+            </div>
+            
+            <!-- if adamin logged in -->
+            <div *ngIf="isAdminLoggedIn && !isLoggedIn" class="hello">
+                <p class="logoutMessage">
+                    <span class="helloName">Hello Admin &nbsp;
+                        <i (click)="logout()" class="logoutButton">Logout
+                            <i class="glyphicon glyphicon-log-out"></i>
+                        </i> &nbsp;</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

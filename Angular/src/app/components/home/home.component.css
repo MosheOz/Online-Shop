@@ -1,0 +1,98 @@
+.main {
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+h3 {text-align: center;}
+
+form {
+     width: 75%;
+     margin: auto;
+}
+
+.main > div {
+    padding: 20px 0;
+    font-size: 15px;
+    height: 100%;
+}
+
+.loginForm {
+    border-radius: 15px;
+    background: rgb(255, 209, 124);
+}
+
+.about {
+    border-radius: 15px;
+    background: rgb(255, 209, 124);
+}
+
+
+.shopDetails {
+    border-radius: 15px;
+    height: 100%;
+    background: rgb(255, 209, 124);
+}
+
+.shpoDetails:hover {
+    background: whitesmoke;
+}
+
+.afterLogin {
+    border-radius: 15px;
+    background: rgb(255, 209, 124);
+    color: black !important;
+    margin-bottom: 0%;
+}
+
+.afterLogin:hover {
+    background: #28a745;
+}
+
+.btn, .btn-outline-light, .btn-lg{
+    transition: 0s !important; 
+    border: none !important;
+}
+
+.liveStore {
+    display: inline-block;
+    font-size: 20px;
+    height: 50%;
+    width: 75%;
+    margin-left: 12.5%;
+    text-align: center;
+    list-style-position: inside;
+}
+
+.afterLoginMessage{
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    border-radius: 15px;
+    background: white;
+}
+@media screen and (max-width: 992px) {
+    .main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main > div {
+        margin: 10px;
+    }
+
+    .btn, .btn-outline-light, .btn-lg{
+        height: 230px !important;
+    }
+
+    .loginForm {
+        max-height: 300px !important;
+    }
+
+    .btn {
+        display: inline !important;
+    }
+}

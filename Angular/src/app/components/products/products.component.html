@@ -1,0 +1,18 @@
+<div class="div-flex">
+
+    <div class="app-cart" #cart>
+        <app-cart></app-cart>
+    </div>
+    <div class="app-all-products" #productsContainer>
+        <app-all-products></app-all-products>
+    </div>
+
+    <!-- open and close the cart -->
+    <div class="openCart" (click)="open(cart, productsContainer, openCart, closeCart)" #openCart>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+
+    <div class="openCartBigScreen" (click)="toggle(cart, productsContainer)" #openCartBigScreen>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</div>

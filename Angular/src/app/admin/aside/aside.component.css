@@ -1,0 +1,37 @@
+.main {
+    height: 100%;
+}
+.sectionA {
+    height: 10%;
+    border: 1px solid lightgray;
+}
+
+.sectionA > div {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+.sectionA > div {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sectionA > div:hover {
+    background: white;
+}
+
+.sectionA > div:focus {
+    background: white;
+    color: brown;
+}
+
+.sectionA >div > i {
+    margin-top: 5%;
+}
+
+.sectionB {
+    height: 90%;
+    overflow: auto;
+}

@@ -1,0 +1,28 @@
+.main {
+    width: 95%;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+    font-size: 15px;
+}
+
+button {
+    width: 55%;
+    margin: auto;
+}
+i {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: 95%;
+        margin: auto;
+        text-align: center;
+    }
+
+    button {
+        width: 75%;
+        margin: auto;
+    }
+}

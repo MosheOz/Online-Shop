@@ -1,0 +1,44 @@
+<h3>Live Store:</h3>
+<br>
+
+<div class="liveStore">
+    <img *ngIf="!products || !orders" src="/assets/images/Double Ring-1s-200px.gif" alt="loader" width="50px" height="50px">
+    <p *ngIf="products">
+        <strong>Current Products On Site: </strong>{{products.length}}
+    </p>
+    <p *ngIf="orders">
+        <strong>Current Orders On Site: </strong>{{orders.length}}
+    </p>
+</div>
+
+<div class="afterLoginMessage" *ngIf="isLoggedIn" style="text-align: center; font-size: 17px;">
+    <div *ngIf="cartStatus">
+        <div [ngSwitch]="cartStatus.value">
+            <div *ngSwitchCase="'a'">
+                Hi
+                <b>{{currentCustomer.firstName}}</b>
+                <br> You have an open cart from {{cartStatus.carts.dateCreated | date}}
+                <br> with total of: {{totalTo() | currency:'ILS'}}
+                <br> you can click on the Resume Button to continue Shopping.
+                <br> Enjoy Your Shopping With Us!
+            </div>
+
+            <div *ngSwitchCase="'b'">
+                <div class="alert">
+                    hi
+                    <b>{{currentCustomer.firstName}}</b>
+                    <br>welcome back :)
+                    <br> Your Last Purchase : {{cartStatus.order[0].dateForShipping | date}}
+                </div>
+            </div>
+
+            <div *ngSwitchCase="'c'">
+                Hi
+                <b>{{currentCustomer?.firstName}}</b>
+                <br> Welcome To Your First Shopping
+                <br> You can click on the button to start Shopping :)
+                <br> Enjoy Your Shopping With Us..
+            </div>
+        </div>
+    </div>
+</div>

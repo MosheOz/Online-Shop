@@ -1,0 +1,167 @@
+<div class="main">
+    <div class="background">
+        <h3>Registration Page</h3>
+        <form #form="ngForm">
+
+            <div class="line">
+                <div class="column">
+
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" required #firstname="ngModel" [(ngModel)]="customer.firstName" name="firstName">
+                    <div style="text-align: center;" *ngIf="firstname.errors?.required &&  firstname.touched" class="alert-danger">
+                        First Name is required.
+                    </div>
+
+                    <br>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" required #lastName="ngModel" [(ngModel)]="customer.lastName" name="lastName">
+                    <div style="text-align: center;" *ngIf="lastName.errors?.required &&  lastName.touched" class="alert-danger">
+                        Last Name is required.
+                    </div>
+
+                    <br>
+
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel"
+                        [(ngModel)]="customer.email " name="email ">
+                    <div *ngIf="isEmailExist " class="alert alert-danger ">Email Aready In System</div>
+                    <div style="text-align: center; " *ngIf="email.errors?.required && email.touched " class="alert-danger ">
+                        Email is required.
+                    </div>
+                    <div style="text-align: center; " *ngIf="email.errors?.pattern && email.touched " class="alert-danger ">
+                        Email is invalid
+                    </div>
+
+                    <br>
+
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" minlength="4" required #password="ngModel" [(ngModel)]="customer.password" name="password">
+                    <div style="text-align: center; " *ngIf="password.errors?.required && password.touched" class="alert-danger">
+                        Password is required.
+                    </div>
+                    <div style="text-align: center;" *ngIf="password.errors?.minlength && password.touched" class="alert-danger">
+                        Password needs to contain at least 4 characters
+                    </div>
+
+                    <br>
+
+                    <label for="passwordConfirm">Confirm Password</label>
+                    <input type="password" class="form-control" required #passwordConfirm name="passwordConfirm">
+                    <div style="text-align: center;" *ngIf="!isPasswordMatch" class="alert-danger">Password Not Match</div>
+
+                </div>
+
+                <div class="column">
+
+                    <label for="phone">Phone:</label>
+                    <input class="form-control" required minlength="10" maxlength="10" #phone="ngModel" [(ngModel)]="customer.phone" name="phone">
+                    <div style="text-align: center;" *ngIf="phone.errors?.required && phone.touched" class="alert-danger">
+                        Phone number is required
+                    </div>
+                    <div style="text-align: center;" *ngIf="phone.errors?.minlength && phone.touched" class="alert-danger">
+                        Please enter a valid cell phone number
+                    </div>
+                    <div style="text-align: center;" *ngIf="phone.errors?.maxlength && phone.touched" class="alert-danger">
+                        Please enter a valid cell phone number
+                    </div>
+
+                    <br>
+
+                    <label for="city">City</label>
+                    <select class="categoriesselect" name="city" class="form-control" required #city="ngModel" [(ngModel)]="customer.city">
+                        <optgroup style="padding-right:10px; " label="center ">
+                            <option>Beney Berak</option>
+                            <option>Bat Yam</option>
+                            <option>Givat Shemuel</option>
+                            <option>Givatayim</option>
+                            <option>Holon</option>
+                            <option>Yahud</option>
+                            <option>Lod</option>
+                            <option>Modi'in</option>
+                            <option>Ness Tziyona</option>
+                            <option>Petach Tikva</option>
+                            <option>Kiryat Ono</option>
+                            <option>Kiryat Ekron</option>
+                            <option>Rishon Leztion</option>
+                            <option>Rehovot</option>
+                            <option>Ramat Gan</option>
+                            <option selected=" ">Tel Aviv</option>
+                        </optgroup>
+                        <optgroup style="padding-right:10px; " label="Jerusalem Area ">
+                            <option>Bet Shemesh</option>
+                            <option>Jerusalem</option>
+                            <option>Ma'ale Edomim</option>
+                        </optgroup>
+                        <optgroup style="padding-right:10px; " label="North ">
+                            <option>Zichron Yaakov</option>
+                            <option>Haifa</option>
+                            <option>Teveria</option>
+                            <option>Yokne'am</option>
+                            <option>Karmiel</option>
+                            <option>Nahariya</option>
+                            <option>Natzrat</option>
+                            <option>Akko</option>
+                            <option>Affula</option>
+                            <option>Tzemach</option>
+                            <option>Kiryat Ata</option>
+                            <option>Kiryat Bialik</option>
+                            <option>Rosh Pina</option>
+                            <option>Regba&nbsp;&nbsp;&nbsp;</option>
+                            <option>Ramat Yishay</option>
+                        </optgroup>
+                        <optgroup style="padding-right:10px; " label="South ">
+                            <option>Eilat</option>
+                            <option>Ashdod</option>
+                            <option>Ashkelon</option>
+                            <option>Be'er Sheva</option>
+                            <option>Gan Yavneh</option>
+                            <option>Dimona</option>
+                            <option>Kastina</option>
+                            <option>Rishon Letzion</option>
+                        </optgroup>
+                        <optgroup style="padding-right:10px; " label="Sharon ">
+                            <option>Gan Shemuel</option>
+                            <option>Hod Hasharon</option>
+                            <option>Hertzeliya</option>
+                            <option>Hadera</option>
+                            <option>Kefar saba</option>
+                            <option>Netania</option>
+                            <option>Ra'ana</option>
+                        </optgroup>
+                    </select>
+
+                    <div style="text-align: center;" *ngIf="city.errors?.required && city.touched" class="alert-danger">
+                        City is required
+                    </div>
+                    <br>
+                    <label for="street ">Street</label>
+                    <input type="text" class="form-control" required #street="ngModel" [(ngModel)]="customer.street " name="street">
+                    <div style="text-align: center;" *ngIf="street.errors?.required && street.touched" class="alert-danger">
+                        Street is required
+                    </div>
+                    <br>
+                    <label for="houseNumber">House Number</label>
+                    <input type="text" class="form-control" required #houseNumber="ngModel" [(ngModel)]="customer.houseNumber" name="houseNumber">
+                    <div style="text-align: center;" *ngIf="houseNumber.errors?.required && houseNumber.touched" class="alert-danger">
+                        House number is required
+                    </div>
+
+                    <br>
+                    <br>
+
+                </div>
+            </div>
+
+            <div class="line ">
+
+                <button class="btn btn-success btn-block " (click)="addUser(password.value, passwordConfirm.value)" [disabled]="form.form.invalid">Submit
+                    <span *ngIf="loader">
+                        <img src="/assets/images/Double Ring-1s-200px.gif " alt="loader ">
+                    </span>
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.ok {
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    color: green;
+    background: white;
+    text-align: center;
+}
+
+.ok-circle {
+    margin-top: 20%;
+    font-size: 150px;
+}

@@ -1,0 +1,114 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    max-height: 70px;
+    font-size: 20px;
+    line-height: 50px;
+    background: green;
+    color: black;
+    transition: 2s;
+    margin-bottom: 5px;
+}
+
+.main:hover {
+    transition: 2s;
+    background: rgb(181, 241, 181);
+}
+
+.title {
+    flex: 1;
+    text-align: left;
+    font-family: "Dancing Script", cursive;
+    font-size:25px;
+    background:rgb(21, 168, 21); 
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0px 45px 45px 0px;
+    transition: 2s;
+}
+.title:hover {
+    color: green;
+    background: whitesmoke;
+}
+
+.subMain {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation{
+    height: 100%;
+    flex: 1;
+    text-align: center;
+}
+
+.logout {
+    height: 100%;
+    flex: 2;
+}
+
+.hello{
+    height: 100%;
+    width: 100%;
+}
+
+.logoutMessage{
+    height: 100%;
+    width: 100%;
+
+}
+
+.logoutButton{
+    height: 100%;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.logoutButton:hover {
+    color: gray;
+}
+
+.routerSpan{
+    color: whitesmoke;
+}
+
+.routerSpan:hover {
+    height: 100%;
+    cursor: pointer;
+    color: gray;
+}
+.helloName {
+    float: right;
+    margin-right: 20px;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 790px) {
+    .main {
+        font-size: 15px;
+    }
+    .title > p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        font-size: 9px;
+    }
+    .title > p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 349px) {
+    .main {
+        font-size: 8px;
+    }
+    .title > p {
+        font-size: 9px;
+    }
+}

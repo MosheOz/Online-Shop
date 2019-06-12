@@ -1,0 +1,79 @@
+<div class="cart-container">
+
+    <div class="sectionA">
+
+        <div class="sectionATitle">
+            <p>My Cart &nbsp;
+                <i class="fas fa-cart-arrow-down"></i>
+            </p>
+        </div>
+        <!-- check if there are items in cart and display the empty cart option -->
+        <div *ngIf="cartItems?.length > 0" class="emptyCart" (click)="deleteAllItemsFromCart()">
+            <p>Empty Cart &nbsp;
+                <i class="material-icons">&#xe928;</i>
+            </p>
+        </div>
+        
+        <hr>
+    </div>
+
+    <div class="sectionB">
+        <div *ngIf="cartItems">
+
+            <div class="title">
+                <div>item</div>
+                <div>name</div>
+                <div>units</div>
+                <div>price</div>
+                <div>delete</div>
+            </div>
+
+            <div *ngIf="cartItems.length === 0">
+                <div style="text-align: center; margin-top: 50px; color: black;font-size: 20px;">Your Cart Is empty
+                    <br>
+                    <i class="fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div *ngFor="let c of cartItems" class="cartItemsContainer">
+                <div class="productImg">
+                    <img src="http://localhost:3000/images/{{c.product.imgFileName}}" alt="productImg">
+                </div>
+
+                <div class="productName">
+                    <p>{{c.product.name}}</p>
+                </div>
+
+                <div class="productQuantity">
+                    <p>{{c.quantity}}</p>
+                </div>
+
+                <div class="productTotalPrice">
+                    <p>{{c.totalPrice | currency:'ILS'}}</p>
+                </div>
+
+                <div class="deleteItem">
+                    <span #deleteBtn class="close" (click)="deleteOneItemFromCart(c._id)">&times;</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="!cartItems" class="loader">
+            <img src="/assets/images/Double Ring-1s-200px.gif" alt="loader">
+        </div>
+    </div>
+
+    <div class="sectionC">
+        <hr>
+
+        <div #total>
+            <p>Total: {{getSumCart() | currency:'ILS'}} </p>
+        </div>
+        <div>
+            <p routerLink="/order" (click)="setTotalInStore(getSumCart())">Order &nbsp;
+                <i class="fas fa-angle-double-right"></i>
+            </p>
+        </div>
+    </div>
+</div>

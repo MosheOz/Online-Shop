@@ -1,0 +1,12 @@
+form {
+    width: 50%;
+    margin: 50px auto;
+    border: 1px solid purple;
+    padding: 1%;
+}
+
+.message {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}

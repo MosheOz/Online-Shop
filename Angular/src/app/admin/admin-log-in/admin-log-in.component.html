@@ -1,0 +1,30 @@
+<div class="main">
+    <form>
+        <!-- if incorrect username or password -->
+        <div *ngIf="loginFailed === true" class="alert alert-danger message">
+            Incorrect username or password
+        </div>
+
+        <div class="line">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" [(ngModel)]="credentials.email" placeholder="Type Your Email Here" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" [(ngModel)]="credentials.password" placeholder="Type Your Password Here" class="form-control">
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="form-group">
+                <button class="btn btn-primary" (click)="adminLogin()">Login
+                    <span *ngIf="loader">
+                        <img src="/assets/images/Double Ring-1s-200px.gif " alt="loader ">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

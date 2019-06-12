@@ -1,0 +1,137 @@
+<div class="flex-container">
+
+    <!-- divs for menu open and close -->
+    <div class="showMenu">
+        <i class="glyphicon glyphicon-menu-hamburger" (click)="toggle(categoriesShow)"></i>
+    </div>
+
+    <div class="showCategories">
+        <i class="glyphicon glyphicon-menu-hamburger" (click)="toggleCategories(categoriesShow)"></i>
+    </div>
+
+    <!-- getting the categories -->
+    <div #categoriesShow class="categoriesShow">
+        
+        <ul class="categories-container">
+            <li *ngFor="let c of categories" (click)="getProductsCategory(c._id)">
+                <a>{{c.name}}</a>
+            </li>
+            <li>
+                <span class="fa fa-search search-icon" title="search" (click)="openSearch(searchAppear)" #searchIcon></span>
+            </li>
+        </ul>
+
+        <!-- search -->
+        <ul>
+            <li class="search-appear" #searchAppear style="background: transparent">
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend search-input">
+                        <span class="input-group-text" type="text" name="search" (click)="search(searchValue.value)">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search.." #searchValue>
+                        <span class="input-group-text closeInput" (click)="closeSearchInput(searchAppear)" #closeInputSearch>&times;
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="products-container">
+        <div *ngFor="let p of products" class="productDiv">
+
+            <!-- build the product div -->
+
+            <!-- product image -->
+            <div class="productDivSectionA" (click)="openBackDropCustomClass(modal, title, p, imageWrap, priceWrap, productID)">
+                <img src="http://localhost:3000/images/{{p.imgFileName}}" alt="pic">
+            </div>
+
+            <!-- product details -->
+            <div class="productDivSectionB" (click)="openBackDropCustomClass(modal, title, p, imageWrap, priceWrap, productID)">
+                <p>
+                    <b> Product Name: </b>{{p.name}}
+                    <b>category:</b>{{p.category.name}}</p>
+                <p>
+                    <b>Price: </b>{{p.price | currency:'ILS'}}</p>
+            </div>
+
+            <!-- input for short way to add product to cart -->
+            <div class="productDivSectionC">
+
+                <div class="input" style="color: orange;">
+                    <input type="number" value="1" min="1" placeholder="Amount" #amount>
+                </div>
+
+                <div class="inputAdd" (click)="addAmount(amount.value, p)">
+                    <p>
+                        <i class="material-icons" style="font-size:30px;color:orange">add_shopping_cart</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- default message for user when opening the products page  -->
+        <div *ngIf="!products" class="defaultMessage">
+            <p>You Can Start Shop</p>
+            <i class="fas fa-shopping-basket"></i>
+        </div>
+    </div>
+
+    <!-- modal for adding products to cart -->
+    <div class="modal" tabindex="-1" role="dialog" #modal>
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <!-- modal header -->
+                <div class="modalHeader" style="background: rgba(255, 166, 0, 0.644)">
+                    <h5 class="modalTitle" #title> </h5>
+                    <span (click)="closeModal(modal)">&times;</span>
+                </div>
+
+                <!-- modal body -->
+                <div class="modalBody">
+
+                    <!-- image product -->
+                    <div class="imageWrap">
+                        <img src="" alt="" #imageWrap>
+                    </div>
+
+                    <!-- input and price product -->
+                    <div class="inputAndPriceWrap">
+
+                        <div class="priceWrap">
+
+                            <div>
+                                <b>Price:</b>
+                            </div>
+                            <div #priceWrap></div>
+                        </div>
+
+                        <div class="inputWrap">
+
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+
+                                    <span class="input-group-text" id="inputGroup-sizing-lg">Amount</span>
+                                    <input type="number" value="1" min="1" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #quantity>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- button for submit, getting all data from modal to the function -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btn-block" (click)="addQuantityToCart(quantity.value, modal)">
+                        <i class="material-icons" style="font-size:30px">add_shopping_cart</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

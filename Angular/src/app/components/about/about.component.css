@@ -1,0 +1,14 @@
+img {
+    border-radius: 10px;
+    padding: 1%;
+    border: darkslategray;
+    max-width: 450px;
+}
+
+.main {
+    height: 100%;
+}
+
+.main > div:nth-of-type(1){
+    height: 40%;
+}

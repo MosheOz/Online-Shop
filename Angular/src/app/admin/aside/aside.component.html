@@ -1,0 +1,20 @@
+<div class="main">
+
+
+    <div class="sectionA">
+
+        <div class="sectionAClick" (click)="edit()" tabindex="1">
+            edit product
+            <i class="glyphicon glyphicon-pencil"></i>
+        </div>
+        <div class="sectionAClick" (click)="Add()" tabindex="1">
+            add product
+            <i class="glyphicon glyphicon-plus"></i>
+        </div>
+
+    </div>
+    <div class="sectionB">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

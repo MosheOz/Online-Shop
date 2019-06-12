@@ -1,0 +1,159 @@
+.flex-container {
+    height: 100%;
+}
+
+.categories-container{
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 209, 124);
+    border-radius: 20px 0 0 20px;
+    margin-left: 30px;
+}
+
+ul:nth-of-type(2){
+    background: transparent;
+}
+
+li {
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+li > a:hover {
+    color: orange;
+}
+
+.products-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.productDiv {
+    flex: 3;
+    flex-basis: 25%;
+    height: 300px;
+    max-width: 300px;
+    background: white;
+    padding: 15px;
+    margin:15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productDivSectionA {
+    flex: 3;
+}
+.productDivSectionB {
+    flex: 1;
+}
+.productDivSectionC {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    border: 1px solid orange;
+    text-align: center;
+}
+
+.productDivSectionC > div > input {
+    flex: 2;
+    text-align: center;
+    display:block;
+    border:none;
+    height: 100%;
+ }
+
+ .input {
+    height: 100%;
+ }
+
+ .inputAdd {
+     flex: 1;
+     text-align: center;
+ }
+
+ .inputAdd > p {
+     width: 100%;
+     margin: auto;
+ }
+
+ .productDivSectionC > button {
+    flex: 3;
+    float: right;
+ }
+
+.productDiv:hover {
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 90% !important;
+    margin: auto !important;
+}
+
+.search-appear {
+    display: none;
+}
+.search-icon {
+    font-size: 20px;
+}
+.search-icon:hover {
+    color: lightgray;
+}
+
+.showMenu{
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.showMenu > i {
+    margin-left: 95%;
+}
+
+@media screen and (max-width: 650px){
+    .categories-container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    ul > li, li a {
+        min-width: 100%;
+        margin: 5px;
+    }
+
+    li:hover {
+        background: white;
+    }
+
+    ul:nth-of-type(2) > li:hover {
+        background: lightgray;;
+    }
+}

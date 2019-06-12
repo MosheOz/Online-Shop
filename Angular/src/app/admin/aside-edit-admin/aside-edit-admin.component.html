@@ -1,0 +1,82 @@
+<div class="edit-container">
+
+    <div class="sectionB" *ngIf="!product">
+        <p>Tap on product for update</p>
+    </div>
+
+    <div class="sectionB" *ngIf="product">
+        <form #form="ngForm">
+
+            <div class="product-name">
+                <label for="name">Product Name</label>
+                <input name="name" type="text" class="form-control" required minlength="1" #name="ngModel" [(ngModel)]="product.name">
+            </div>
+
+            <!-- alert if empty input-->
+            <div style="text-align: center;" *ngIf="name.errors?.required &&  name.touched" class="alert-danger">
+                Name is required.
+            </div>
+            <div style="text-align: center;" *ngIf="isName == true" class="alert-danger">
+               Please enter a valid name.
+            </div>
+
+            <br>
+
+            <div class="product-id">
+                <label for="ID">Product ID</label>
+                <input name="id" type="text" class="form-control" #id="ngModel" [(ngModel)]="product._id" disabled>
+            </div>
+
+            <br>
+            <div class="product-price">
+                <label for="price">Product Price</label>
+                <input name="price" type="number" class="form-control" required #price="ngModel" [(ngModel)]="product.price">
+            </div>
+
+            <div style="text-align: center;" *ngIf="price.errors?.required &&  price.touched" class="alert-danger">
+                Price is required.
+            </div>
+
+            <br>
+
+            <div class="product-image">
+
+                <label for="image">Product Image</label>
+                <div class="alert alert-danger" #alert>
+
+                    <div class="custom-file">
+                        <input name="file" type="file" (change)="uploadFile($event, alert)" required #file class="form-control" id="upload-photo" accept="image/*">
+                        <label>current image: {{product.imgFileName}}</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <br>
+
+            <div class="product-category">
+
+                <label for="category">Product Category</label>
+                <select name="category" class="custom-select" required #category (change)="categoryChanged()">
+
+                    <option *ngIf="product?.category.name" value="{{product.category._id}}">
+                        Current: {{product.category.name}}</option>
+                    <option *ngFor="let c of categories" value="{{c?._id}}">{{c?.name}}</option>
+
+                </select>
+                <label *ngIf="product?.category.name">current category: {{product.category.name}}</label>
+            </div>
+            <div *ngIf="isAlert" class="alert alert-danger">
+                <p>
+                    <b>notice!</b>
+                    <br> You have changed the current category to a new one</p>
+            </div>
+            <br>
+
+            <div class="button-submit">
+                <button class="btn btn-success btn-block" (click)="send(category.value, file.value)">Submit Editing</button>
+            </div>
+        </form>
+    </div>
+
+</div>

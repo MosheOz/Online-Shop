@@ -1,0 +1,17 @@
+div {
+    height: 100%;
+    background: green;
+    color: white;
+    transition: 2s;
+    margin-top: 5px; 
+}
+
+div:hover {
+    transition: 2s;
+    background: rgb(181, 241, 181);
+    color: green;
+}
+
+p {
+    text-align: center; 
+}

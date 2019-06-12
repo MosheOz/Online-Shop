@@ -1,0 +1,91 @@
+.cart-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionA {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-height: 80px;
+}
+.sectionA > div {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+.sectionARight:hover {
+    cursor: pointer;
+    color: green;
+}
+
+.sectionB {
+    flex: 8;
+    height:auto;
+    max-height:350px;
+    overflow:auto;   
+}
+
+.sectionC {
+     flex: 1; 
+}
+
+.sectionC > div {
+    text-align: center;
+}
+
+.loader {
+    margin-top: 10%; 
+    text-align: center;
+}
+
+.loader > img {
+    width: 150px;
+    height: 150px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    text-align: center;
+    background: white;
+}
+
+.title > div {
+    flex: 1;
+    font-weight: bold;
+}
+.cartItemsContainer {
+    background: rgb(117, 216, 117);
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    text-align: center;
+    line-height: 15px;
+    align-items: center;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.cartItemsContainer > div {
+    flex-basis: 15%;
+    flex: 1;
+}
+
+
+.cartItemsContainer > .productImg > img {
+    width: 100px;
+    height: 100px;
+    padding: 7px;
+}
+
+.cartItemsContainer:hover {
+    background: rgb(181, 241, 181);
+    cursor: pointer;
+}

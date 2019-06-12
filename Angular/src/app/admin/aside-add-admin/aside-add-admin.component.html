@@ -1,0 +1,67 @@
+<div class="add-container" #add>
+
+    <div class="sectionB">
+
+        <form #form="ngForm">
+
+            <div class="product-name">
+                <label for="name">Product Name</label>
+                <input name="name" type="text" class="form-control" required #name="ngModel" [(ngModel)]="product.name">
+            </div>
+
+            <div style="text-align: center;" *ngIf="name.errors?.required &&  name.touched" class="alert-danger">
+                Name is required.
+            </div>
+            <div style="text-align: center;" *ngIf="isName == true" class="alert-danger">
+                Please enter a valid name.
+            </div>
+
+            <br>
+
+            <div class="product-price">
+                <label for="price">Product Price</label>
+                <input name="price" type="number" class="form-control" required #price="ngModel" [(ngModel)]="product.price">
+            </div>
+
+            <div style="text-align: center;" *ngIf="price.errors?.required &&  price.touched" class="alert-danger">
+                Price is required.
+            </div>
+
+            <br>
+
+            <div class="product-image">
+
+                <label for="image">Product Image</label>
+
+                <!-- color div changing on user upload file -->
+                <div class="alert alert-danger" #alert>
+                    <div class="custom-file">
+                        <input name="file" type="file" (change)="uploadFile($event, alert)" required #file class="form-control" id="upload-photo" accept="image/*">
+                    </div>
+
+                    <div *ngIf="imageRequired" class="alert-danger">
+                        Image is required
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="product-category">
+
+                <label for="category">Product Category</label>
+                <select name="category" class="custom-select" #category class="form-control">
+                    <option *ngFor="let c of categories" value="{{c?._id}}">{{c?.name}}</option>
+                </select>
+
+            </div>
+
+            <br>
+            
+            <div class="button-submit">
+                <button class="btn btn-success btn-block" [disabled]="form.form.invalid || disableBtnForImage == true" (click)="addItem(category.value)">Submit New Product</button>
+            </div>
+        </form>
+    </div>
+
+</div>

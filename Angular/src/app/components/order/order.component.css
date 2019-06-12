@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    color: darkslategray;
+}
+
+app-cart-details-order {
+    flex: 1;
+    background: rgb(255, 209, 124);
+    margin: 10px;
+    padding: 2px;
+    border-radius: 3%;
+}
+
+app-user-details-order{
+    flex: 1;
+    background: rgb(255, 209, 124);
+    margin: 10px;
+    padding: 2px;
+    border-radius: 3%; 
+    overflow: auto;
+}
+
+app-cart-details-order:hover {
+    cursor: pointer;
+    color: black;
+}
+
+app-user-details-order:hover {
+    cursor: pointer;
+    color: black;
+}
+
+@media screen and (max-width: 750px) {
+    .main {
+        flex-direction: column;
+    }
+}
