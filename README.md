@@ -20,10 +20,10 @@ For the server side I used<br>
 * The files divided into four:<br>
     <b> ==> App.js</b> main file, using <b> middlewares</b> for: <br>
         &nbsp;&nbsp;&nbsp;&nbsp;<b>const server = express();</b><br>
-        <b>server.use(express.json())</b> for requests body parser. <br>
-        <b>server.use(cors())</b> for Cors<br>
-        <b>server.use("/api", controller)</b> for api routes to the controller page.<br>
-        <b>server.use(express.static('public'))</b> for public files access.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>server.use(express.json())</b> for requests body parser. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>server.use(cors())</b> for Cors<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>server.use("/api", controller)</b> for api routes to the controller page.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<b>server.use(express.static('public'))</b> for public files access.<br>
     <b> ==> Controller.js</b> Uses for all API routes <br>
     <b> ==> Logics.js</b> Uses to connect the requests between the The api layer and the Database<br>
     <b> ==> Dal.js</b> Uses to active the DB connection.<br>
